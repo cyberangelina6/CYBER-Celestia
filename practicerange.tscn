@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bnxmqehxdpsqw"]
+
+[ext_resource type="Texture2D" uid="uid://dffryxcbtixqg" path="res://blink/cubemap.png" id="1_u52tu"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_lljv7"]
+panorama = ExtResource("1_u52tu")
+
+[sub_resource type="Sky" id="Sky_355mc"]
+sky_material = SubResource("PanoramaSkyMaterial_lljv7")
+
+[sub_resource type="Environment" id="Environment_iixfi"]
+background_mode = 2
+sky = SubResource("Sky_355mc")
+
+[node name="Node3D" type="Node3D" unique_id=1368618935]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=393083770]
+environment = SubResource("Environment_iixfi")
