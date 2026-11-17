@@ -35,8 +35,8 @@ heightmap_texture = ExtResource("5_7wp6r")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_xgisc"]
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_4ch1y"]
-data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+[sub_resource type="BoxShape3D" id="BoxShape3D_floor"]
+size = Vector3(25.6123, 1, 29.815334)
 
 [node name="Node3D" type="Node3D" unique_id=1368618935]
 
@@ -44,6 +44,7 @@ data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0
 environment = SubResource("Environment_iixfi")
 
 [node name="Player" type="CharacterBody3D" parent="." unique_id=417493663]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 script = ExtResource("2_wojau")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=1011830380]
@@ -61,12 +62,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.803566, 11.693258, -28.668
 mesh = SubResource("SphereMesh_xgisc")
 surface_material_override/0 = SubResource("StandardMaterial3D_uk4rb")
 
-[node name="floor" type="MeshInstance3D" parent="." unique_id=1455750815]
+[node name="floor" type="StaticBody3D" parent="." unique_id=1455750815]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="floor" unique_id=1455750816]
 transform = Transform3D(12.80615, 0, 0, 0, 1, 0, 0, 0, 14.907667, 0, 0, 0)
 visible = false
 mesh = SubResource("PlaneMesh_xgisc")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="floor" unique_id=384706789]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
-shape = SubResource("ConcavePolygonShape3D_4ch1y")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_floor")
 debug_color = Color(0.9609392, 0, 0.5159318, 0.41960785)
