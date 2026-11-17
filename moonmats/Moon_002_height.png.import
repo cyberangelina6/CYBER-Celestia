@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dk7aiynid86v"
-path.s3tc="res://.godot/imported/cubemap.png-991b8484ed060d87b1ee79eaa6e757ce.s3tc.ctex"
+uid="uid://ojf6vet8wqle"
+path.s3tc="res://.godot/imported/Moon_002_height.png-625e9caf4c8b78422a4e3e880ed3e9ae.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://cubemap.png"
-dest_files=["res://.godot/imported/cubemap.png-991b8484ed060d87b1ee79eaa6e757ce.s3tc.ctex"]
+source_file="res://moonmats/Moon_002_height.png"
+dest_files=["res://.godot/imported/Moon_002_height.png-625e9caf4c8b78422a4e3e880ed3e9ae.s3tc.ctex"]
 
 [params]
 
